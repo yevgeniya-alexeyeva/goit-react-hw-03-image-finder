@@ -1,6 +1,7 @@
 import "./App.css";
 import { Component } from "react";
 import Searchbar from "./components/Searchbar";
+import ImageGallery from "./components/ImageGallery";
 
 class App extends Component {
   state = {
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <Searchbar onSubmit={this.getQuery} />
+        <ImageGallery query={this.state.query} />
       </div>
     );
   }
